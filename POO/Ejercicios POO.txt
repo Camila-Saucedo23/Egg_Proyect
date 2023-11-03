@@ -1,0 +1,509 @@
+EJERECICIO 1
+* main 
+Main:ServicioLibro service = new ServicioLibro();
+      Libro lb = service.cargarLibro();
+      
+      service.mostrarInformacion(lb);
+
+* libro
+public class Libro {
+   public String ISBN;
+   public String titulo;
+   public String autor;
+   public int numPaginas;
+
+    // Constructor vacío
+    public Libro() {}
+
+    public Libro(String ISBN, String titulo, String autor, int numPaginas) {
+        this.ISBN = ISBN;
+        this.titulo = titulo;
+        this.autor = autor;
+        this.numPaginas = numPaginas;
+    }
+
+    @Override
+    public String toString() {
+        return "Libro{" + "ISBN=" + ISBN + ", titulo=" + titulo + ", autor=" + autor + ", numPaginas=" + numPaginas + '}';
+    }
+
+   
+    
+   
+}
+*servicelibro
+public class ServicioLibro {
+    
+     public Libro cargarLibro() {
+        Scanner scanner = new Scanner(System.in);
+       
+        Libro libro = new Libro();
+        System.out.print("Ingrese el número de ISBN: ");
+        libro.ISBN = scanner.nextLine();
+
+        System.out.print("Ingrese el título del libro: ");
+        libro.titulo = scanner.nextLine();
+
+        System.out.print("Ingrese el autor del libro: ");
+        libro.autor = scanner.nextLine();
+
+        System.out.print("Ingrese el número de páginas del libro: ");
+        libro.numPaginas = scanner.nextInt();
+        
+        return libro;
+    }
+    
+  public void mostrarInformacion(Libro libro) {
+  
+      System.out.println(libro.toString());
+        
+       
+        
+        
+    }
+}
+
+EJERCICIO 2
+*main 
+public static void main(String[] args) {
+       
+      ServicioCircunferencia service= new ServicioCircunferencia();
+      Circunferencia circ = service.crearCircunferencia();
+      
+        System.out.println(" El area de la circunferencia es de "+" "+service.Area(circ));
+      System.out.println(" El perimetro de la circunferencia es de "+" "+service.Perimetro(circ));
+*circunferencia
+public class Circunferencia {
+    
+    private double radio;
+
+    
+    
+    
+    public Circunferencia() {
+
+
+}
+    public Circunferencia(double radio) {
+        this.radio = radio;
+    }
+
+    public double getRadio() {
+        return radio;
+    }
+
+    public void setRadio(double radio) {
+        this.radio = radio;
+    }
+
+    
+    
+}
+*Service
+public class ServicioCircunferencia {
+
+    public Circunferencia crearCircunferencia() {
+
+        Circunferencia circunferencia = new Circunferencia(5.5);
+
+        System.out.println("Escriba el radio de la circunferencia");
+        Scanner leer = new Scanner(System.in);
+        circunferencia.setRadio(leer.nextDouble());
+
+        return circunferencia;
+    }
+
+    public double Area(Circunferencia circunferencia) {
+
+        return 3.14 * (circunferencia.getRadio() * circunferencia.getRadio());
+
+    }
+
+    public double Perimetro(Circunferencia circunferencia) {
+
+        return 2*3.14*circunferencia.getRadio();
+    }
+}
+
+EJERCICIO 3
+MAIN*
+public static void main(String[] args) {
+       
+      ServicioOperacion serviceO = new ServicioOperacion(); 
+      Operacion op = serviceO.crearOperacion();
+      
+        System.out.println("La suma de los operadores es:"+" "+serviceO.Sumar(op)); 
+         System.out.println("La resta de los operadores es:"+" "+serviceO.Restar(op)); 
+          System.out.println("La multiplicacion de los operadores es:"+" "+serviceO.Multiplicacion(op)); 
+           System.out.println("La division de los operadores es:"+" "+serviceO.Division(op));
+
+operacion*
+public class Operacion {
+    private int numero1;
+    private int numero2;
+
+    public Operacion(int numero1, int numero2) {
+        this.numero1 = numero1;
+        this.numero2 = numero2;
+    }
+
+    public Operacion() {
+        
+        
+    }
+
+    public int getNumero1() {
+        return numero1;
+    }
+
+    public void setNumero1(int numero1) {
+        this.numero1 = numero1;
+    }
+
+    public int getNumero2() {
+        return numero2;
+    }
+
+    public void setNumero2(int numero2) {
+        this.numero2 = numero2;
+    }
+    
+    
+    
+    
+}
+service *
+public class ServicioOperacion {
+    
+    public Operacion crearOperacion(){
+        Operacion op = new Operacion();
+        System.out.println(" Ingrese Primer Numero   ");
+        Scanner leer = new Scanner(System.in);
+        
+        op.setNumero1(leer.nextInt());
+        
+          System.out.println(" Ingrese Segundo Numero   ");
+        op.setNumero2(leer.nextInt());
+        
+        
+        
+        return op;
+        
+    
+    }
+    
+    public int Sumar (Operacion op){
+    
+      return op.getNumero1()+op.getNumero2();
+    
+    }
+    
+    public int Restar (Operacion op){
+    
+      return op.getNumero1()- op.getNumero2();
+    
+    }
+    
+    public int Multiplicacion (Operacion op){
+    int multiplicacion= op.getNumero1()* op.getNumero2();
+        
+    if (multiplicacion==0){
+    
+        System.out.println("  ERROR  ");
+        
+        
+    }
+    
+    
+    
+      return multiplicacion;
+    
+    }
+    
+    public double Division  (Operacion op){
+    int division= op.getNumero1()/ op.getNumero2();
+        
+    if (division==0){
+    
+        System.out.println("  ERROR  ");
+        
+        
+    }
+    
+    
+    
+      return division;
+    
+    }
+}
+
+EJERCICIO 8 
+MAIN
+8Cadena cadena = new _8Cadena();
+ServicioCadena service = new ServicioCadena(); 
+cadena.setFrase("Hola como estas");
+// 
+    service.mostrarVocales(cadena);
+    service.invertirFrase(cadena);
+     service.vecesRepetido(cadena, "a");
+     service.compararLongitud(cadena, "habia");
+     service.unirFrases(cadena, "Me llamo gustavo");
+        System.out.println(service.contiene(cadena, "a"));
+     service.reemplazar(cadena);
+   
+     
+//     
+   }
+
+    }
+OBJETO
+public class _8Cadena {
+    
+    private String frase;
+    private int longitud;
+
+    public _8Cadena() {
+        this.frase = "";
+        this.longitud = 0;
+    }
+
+    public String getFrase() {
+        return frase;
+    }
+
+    public int getLongitud() {
+        return longitud;
+    }
+
+    public void setFrase(String frase) {
+        this.frase = frase;
+        this.longitud=frase.length();
+    }
+
+  
+    
+    
+}
+SERVICIO
+public class ServicioCadena {
+   public void mostrarVocales (_8Cadena cadena)
+   {
+       
+        int contador = 0;
+        String frase = cadena.getFrase();
+        
+        for (int i = 0; i < frase.length(); i++) {
+            char c = Character.toLowerCase(frase.charAt(i));
+            if (c == 'a' || c == 'e' || c == 'i' || c == 'o' || c == 'u') {
+                contador++;
+            }
+        }
+        System.out.println("La frase tiene " + contador + " vocales.");
+    }
+  public void invertirFrase(_8Cadena cadena) {
+        String frase = cadena.getFrase();
+        StringBuilder sb = new StringBuilder(frase);  //Nueva Clase java
+        sb.reverse();
+        
+        System.out.println("La frase invertida es: " + sb.toString());
+    }
+  public void vecesRepetido(_8Cadena cadena,String letra) {
+        char c = letra.charAt(0);
+        String frase = cadena.getFrase();
+        int contador = 0;
+        for (int i = 0; i < frase.length(); i++) {
+            if (frase.charAt(i) == c) {
+                contador++;
+            }
+        }
+        System.out.println("El carácter '" + letra + "' se repite " + contador + " veces.");
+    }        
+  public void compararLongitud(_8Cadena cadena,String frase) {
+      
+     int longitud= cadena.getLongitud();
+      int longitudFrase = frase.length();
+        if (longitud == longitudFrase) {
+            System.out.println("Las frases tienen la misma longitud.");
+        } else if (longitud > longitudFrase) {
+            System.out.println("La frase contenida en la clase es más larga.");
+        } else {
+            System.out.println("La frase ingresada por el usuario es más larga.");
+        }
+    }
+   public void unirFrases(_8Cadena cadena,String frase) {
+       String frasec = cadena.getFrase();
+        System.out.println("La frase resultante es: " + frasec + " " + frase);
+    }
+    public void reemplazar(_8Cadena cadena) {
+        Scanner leer = new Scanner (System.in);
+        System.out.println("Ingrese letra a reemplazar");
+        String letra= leer.next();
+        
+        char c = letra.charAt(0);
+        String frase= cadena.getFrase();
+        String nuevaFrase = frase.replace('a', c);
+        System.out.println("La frase resultante es: " + nuevaFrase);
+    }
+    public boolean contiene(_8Cadena cadena,String letra) {
+       boolean a;
+        String frase= cadena.getFrase();
+       
+        return frase.contains(letra);
+    }
+    
+}
+
+EJERCICIO 10
+MAIN
+ServiceArr Ves = new ServiceArr();
+        Arreglo vec1 = Ves.OrdenarAr1();
+        Ves.RellenarAr2(vec1);
+        Ves.imprimirvector(vec1.getArreglo1());
+        Ves.imprimirvector(vec1.getArreglo2());
+OBJETO
+public double[] getArreglo1() {
+        return Arreglo1;
+    }
+
+    public double[] getArreglo2() {
+        return Arreglo2;
+    }
+    private double[] Arreglo1 = new double [50]; 
+    private double[] Arreglo2 = new double [20];
+
+    public Arreglo() {
+        for (int i = 0; i < Arreglo1.length; i++) {
+            Arreglo1[i]=Math.random()*100;
+        }
+    }
+SERVICE
+public Arreglo OrdenarAr1() {
+        double a = 0, b;
+        Arreglo Ar1 = new Arreglo();
+        for (int i = 0; i < Ar1.getArreglo1().length; i++) {
+            for (int j = i + 1; j < Ar1.getArreglo1().length; j++) {
+                if (Ar1.getArreglo1()[i] > Ar1.getArreglo1()[j]) {
+                    b = Ar1.getArreglo1()[i];
+                    Ar1.getArreglo1()[i]=Ar1.getArreglo1()[j];
+                    Ar1.getArreglo1()[j]=b;
+                }
+            } 
+        }
+         return Ar1;
+    }
+    public void RellenarAr2( Arreglo Ar1){
+        for (int i = 0; i < 10; i++) {
+            Ar1.getArreglo2()[i]=Ar1.getArreglo1()[i] ;
+        }
+       //System.arraycopy(Ar1.getArreglo1(), 0, Ar1.getArreglo2(), 0, 10);
+       for (int i = 10; i < Ar1.getArreglo2().length; i++) {
+            Ar1.getArreglo2()[i]=0.5;
+        }
+    }
+    public void imprimirvector (double[] Ar1){
+            System.out.println("Imprimiendo Array");
+        for (int i = 0; i < Ar1.length; i++) {
+            System.out.printf("%.2f", Ar1[i]);
+            System.out.println("");
+        }
+        System.out.println("");
+    }
+EJERCICIO 11
+ublic static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+
+        // constructor por defecto
+        Date fechaActual = new Date();
+
+        System.out.println("La fecha actual es: ");
+        System.out.println(fechaActual.getDate() + "/" + (fechaActual.getMonth() + 1) + "/" + (fechaActual.getYear()+1900));
+
+        //constructor con parámetros        
+        System.out.println("Ingrese su fecha de nacimiento (año, mes, día)");
+        int anio = leer.nextInt();
+        int mes = leer.nextInt();
+        int dia = leer.nextInt();
+        Date fecha = new Date(fechaActual.getYear() + 1900 - anio, fechaActual.getMonth() + 1 - mes, fechaActual.getDate() - dia);
+
+        System.out.println("Su edad es: " + fecha.getYear() + " años, " + fecha.getMonth() + " meses y " + fecha.getDate() + " dias.");
+    }
+}
+
+
+SERVICE EXTRA 3
+public class RaicesService {
+    
+    public Raices crearRaices(){
+        System.out.println("Por favor ingrese el valor de a, b y c; respectivamente");
+        return new Raices(new Scanner(System.in).useDelimiter("\n").nextInt(), new Scanner(System.in).useDelimiter("\n").nextInt(), new Scanner(System.in).useDelimiter("\n").nextInt());
+    }
+    
+    public double getDiscriminante (Raices roots){
+        return roots.getDiscriminante();
+    }
+    
+    public boolean tieneRaices(Raices roots){
+        return (roots.getDiscriminante() > 0);
+    }
+    
+    public boolean tieneRaiz(Raices roots){
+        return (roots.getDiscriminante() == 0);
+    }
+    
+    public void obtenerRaices (Raices roots){
+        if(tieneRaices(roots)){
+            System.out.printf("Raíz 1 = %f | Raíz 2 = %f \n", ((-roots.getB() + Math.sqrt(roots.getDiscriminante())) / (2 * roots.getA())), ((-roots.getB() - Math.sqrt(roots.getDiscriminante())) / (2 * roots.getA())));
+        }
+    }
+    
+    public void obtenerRaiz (Raices roots){
+        if(tieneRaiz(roots)){
+            System.out.println("Raiz = " + ((-roots.getB() + Math.sqrt(roots.getDiscriminante())) / (2 * roots.getA())));
+        }
+    }
+    
+    public void calcular(Raices roots){
+        if(roots.getDiscriminante() < 0){
+            System.out.println("No se puede realizar la operación porque son números complejos.");
+        }else{
+            obtenerRaices(roots);
+            obtenerRaiz(roots);
+        }
+    }
+    
+}
+EXTRA 5 
+    public static void main(String[] args) {
+        // TODO code application logic here
+        String[] meses = {"enero", "febrero", "marzo", "abril", "mayo", "junio", "julio", "agosto", "septiembre", "octubre", "noviembre", "diciembre"};
+        String mesRandom = meses[(int) (Math.random() * 12)];
+        String mesUsuario;
+        String mesUsuarioMayuscula;
+
+        System.out.println("¡Adivine el mes secreto! \n Introduzca el mes en minúsculas:");
+        System.out.println(mesRandom);
+    
+        do {
+            boolean flagMayus = false;
+            mesUsuario = new Scanner(System.in).useDelimiter("\n").next();
+            mesUsuarioMayuscula = mesUsuario.toUpperCase();
+            for (int i = 0; i < mesUsuario.length(); i++) {
+                if(String.valueOf(mesUsuario.charAt(i)).equals(String.valueOf(mesUsuarioMayuscula.charAt(i)))){
+                    flagMayus = true;
+                    break;
+                }
+            }
+            
+            if(!flagMayus){
+                if (!mesUsuario.equalsIgnoreCase(mesRandom)) {
+                    System.out.println("No ha acertado. Intente adivinarlo introduciendo otro mes:");
+                } else {
+                    System.out.println("¡Ha acertado!");
+                }
+            }else{
+                System.out.println("Por favor ingrese un mes en minúsculas.");
+            }
+        } while (!mesUsuario.equals(mesRandom));
+    }
+
+}

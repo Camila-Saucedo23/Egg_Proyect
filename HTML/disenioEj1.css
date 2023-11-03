@@ -1,0 +1,15 @@
+*{
+    margin: 5px;
+}
+h1{
+
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color:blueviolet;
+}
+p{
+    font-size: smaller;
+    color:  black;
+}
+h2{
+    color: chocolate;
+}

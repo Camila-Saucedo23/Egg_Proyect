@@ -1,0 +1,1 @@
+crsf = sirve para interceptar la informacion entre el navegador y el servidor. si vas a trabajar con formularios en el navegador es mejor no desactivarlo.

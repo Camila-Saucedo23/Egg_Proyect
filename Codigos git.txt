@@ -1,0 +1,25 @@
+------------------------------------------------------------------------
+o crea un nuevo repositorio en la línea de comando
+-------------------------------------------------------------------------
+echo "# martes_egg_tarde" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/leono34/martes_egg_tarde.git
+git push -u origin main
+
+------------------------------------------------------------------------
+hacerlo con el readme
+------------------------------------------------------------------------
+git init
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/leono34/martes_egg_tarde.git
+git push -u origin main
+------------------------------------------------------------------------
+o empujar un repositorio existente desde la línea de comando
+------------------------------------------------------------------------
+git remote add origin https://github.com/leono34/martes_egg_tarde.git
+git branch -M main
+git push -u origin main

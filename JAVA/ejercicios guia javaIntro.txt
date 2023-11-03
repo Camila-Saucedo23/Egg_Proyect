@@ -1,0 +1,1500 @@
+fori tab (genera el for)
+sca (genera scanner)
+alt mas ruedita del mouse(para agrandar la letra del panel)
+diwile mas tab(habre el do)
+EJERCIOCIO 1
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+
+        System.out.println("Digite un numero");
+
+        int numero1 = leer.nextInt();
+
+        System.out.println("Digite otro numero: ");
+
+        int numero2 = leer.nextInt();
+
+        int suma = numero1 + numero2;
+
+        System.out.println("El resultado es: " + suma);
+    }
+
+}
+
+EJERCICIO 2
+
+public static void main(String[] args) {
+        
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Digite su nombre:");
+        String nombre = leer.next();
+        
+        System.out.println("Su nombre es: " + nombre);
+    }
+
+EJERCICIO 3
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Digite la frase:");
+        
+        String frase = leer.nextLine();
+        
+        System.out.println("---------------");
+        System.out.println(frase.toLowerCase());
+        System.out.println("---------------");
+        System.out.println(frase.toUpperCase());
+    }
+
+EJERCICIO 4
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Digite los grados celsius a modificar: ");
+        int temperatura = leer.nextInt();
+        
+        double fahrenheit = 32 +(9 * temperatura/ 5);
+        
+        System.out.println("La temperatura de grados Fahrenheit es: " + fahrenheit);
+    }
+
+EJERCICIO 5
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Digite un numero: ");
+        double numero = leer.nextDouble();
+        
+        
+        
+        System.out.println("El doble del numero ingresado es: " + numero * 2);
+        System.out.println("El triple del numero ingresado es:" + numero * 3);
+        System.out.println("La raiz cuadrada del numero ingresado es: " + Math.sqrt(numero) );
+    
+    }
+
+OTRA FORMA 
+
+public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        int num1 = 0;
+        
+       
+        
+        System.out.println("Ingresa un numero:");
+        num1 = leer.nextInt();
+       
+        elDoble(num1);
+        elTriple(num1);
+        laRaiz(num1);
+        
+    }
+    public static void elDoble(int num1){
+        int doble = num1*2;
+        System.out.println("El doble de " + num1 + " es: " + doble);
+        
+        }
+    public static void elTriple(int num1){
+        int triple = num1*3;
+        System.out.println("El triple de " + num1 + " es: " + triple);
+        
+        }
+    public static void laRaiz(int num1){
+        int raiz = (int) Math.sqrt(num1);
+        System.out.println("La raiz de " + num1 + " es: " + raiz);
+        
+        }
+        
+    }
+
+EJERCICIO 6
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese un numero:");
+        int numero = leer.nextInt();
+        
+        if(numero%2==0){
+            System.out.println("Es par");
+        }else{
+            System.out.println("Es impar");
+        }
+       
+    }
+
+EJERCICIO 7
+
+public static void main(String[] args) {
+        // TODO code application logic here
+        
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.printf("¿Es igual? %s ", (leer.nextLine().equals("eureka")) ? "Correcto" : "incorrecto");
+               
+    }
+
+OTRA FORMA DE HACERLO
+
+EJERCICIO 8
+
+public static void main(String[] args) {
+       Scanner leer = new Scanner(System.in);
+        System.out.println("Digite la frase:");
+        String frase = leer.nextLine();
+        
+        if(frase.length() == 8 ){
+            System.out.println("Correcto");
+        }else{
+            System.out.println("Incorrecto");
+        }
+        
+    }
+
+EJERCICIO 9
+
+public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        String text = leer.nextLine();
+        //String letra = String.valueOf(text.charAt(0));
+        if (text.substring(0,1).equals("A")) {
+            System.out.println("CORRECTO");
+            
+        }else{
+            System.out.println("INCORRECTO");
+                
+            }
+    }
+    
+}
+
+EJERCICIO 10 
+
+public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        int limite, suma= 0, num;
+        
+        do {
+            System.out.println("Ingrese el limite a superar");
+            limite = leer.nextInt();
+            } while (limite < 0);
+            
+        
+        do {
+            System.out.println("Ingrese el numero a sumar");
+            num = leer.nextInt();
+            suma += num;
+            } while (suma <= limite);
+        
+        System.out.println("La suma " + suma + " supero al Limite: " + limite);
+    }
+}
+
+EJERCICIO 11 
+En netbeans
+EJERCICIO 12 
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        int correcta, incorrecta;
+        correcta = 0;
+        incorrecta = 0;
+        String cadena;
+        System.out.println("Ingrese una cadena de 5 caracteres");
+        System.out.println("El primer carácter tiene que ser X y el último tiene que ser una O");
+      
+        cadena = leer.nextLine();
+        
+ while (!cadena.equals("&&&&&")){
+     int longitud = cadena.length();
+     
+     if (cadena.substring(0, 1).equalsIgnoreCase("x") && (cadena.endsWith("o")) && (longitud == 5) ) {
+        
+         correcta++;
+         
+     }else {
+         incorrecta++;
+ System.out.println("Ingrese otra cadena");
+     }
+        System.out.println("Ingrese una cadena válida");
+        cadena = leer.nextLine();
+        
+ }
+ System.out.println("Cadenas correctas " + correcta);
+ System.out.println("Cadenas incorrectas " + incorrecta);
+    }
+    
+}
+EJERCICIO 13
+
+
+Scanner leer = new Scanner(System.in);
+        int n;
+        
+        System.out.println("Ingrese la longitud de los lados: ");
+        n = leer.nextInt();
+        
+        for (int i = 0; i < n ; i++) {
+            for (int j = 0; j < n; j++) {
+                if (i==0 || i==n-1 || j==0 || j==n-1) {
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }  
+            System.out.println("");
+        }
+
+EJERCICIO 14
+
+Scanner leer = new Scanner(System.in);
+        System.out.println(" C O N V E R T I D O R   D E   M O N E D A S ");
+        System.out.println();
+        System.out.println("Ingresa el tipo de moneda a converitr (número)");
+        System.out.println();
+        System.out.println(" 1 - Dólares ");
+        System.out.println(" 2 - Yenes");
+        System.out.println(" 3 - Libras");
+        System.out.println();
+        int numC = leer.nextInt();
+        
+        System.out.println();
+        System.out.println("Ingresa la cantidad de euros que deseas convertir");
+        System.out.println();
+        int euros = leer.nextInt();
+        
+        convertidor(numC,euros);
+public static void convertidor (int numC,int euros) {
+        
+        double coin;
+        switch (numC) {
+            
+            case 1:
+                coin = (euros * 1.28611);
+                System.out.println();
+                System.out.println(euros + " euros equivalen a " + coin + " dólares");
+                break;
+            case 2:
+                coin = (euros * 129.852);
+                System.out.println();
+                System.out.println(euros + " euros equivalen a " + coin + " yenes");
+                break;
+            case 3:
+                coin = (euros * 0.86);
+                System.out.println();
+                System.out.println(euros + " euros equivalen a " + coin + " libras");
+                break;
+        }         
+    }
+
+EJERCICIO 15
+
+public static void main(String[] args) {
+        int[] primerosNum = new int [100];
+        
+        for (int i = 0; i < primerosNum.length; i++) {
+            primerosNum[i] += i;
+            //System.out.println(primerosNum[i]);
+        }
+        for (int i = primerosNum.length-1; i >= 0; i--) {
+            System.out.println(primerosNum[i]);
+        }
+    }
+
+EJERCICIO 16
+
+Scanner leer = new Scanner(System.in);
+        int n, contador = 0, num;
+        
+        System.out.println("Inrese el tamaño de su vector: ");
+        n = leer.nextInt();
+        int[] vectorAleatorio = new int[n];
+        
+        for (int i = 0; i < vectorAleatorio.length; i++) {
+            vectorAleatorio[i] += (Math.random() * 10); 
+        }
+        
+        
+        System.out.println("Ingrese un numero a buscar: ");
+        num = leer.nextInt();
+        
+        for (int i = 0; i < vectorAleatorio.length; i++) {
+            if (vectorAleatorio[i] == num) {
+                contador++;
+                System.out.println("EL numero "+num+" se ha encontrado en la posicion: " + i+1);
+            }
+        }      
+        if (contador == 0) {
+            System.out.println("No se ha encontrado el numero");
+        }else{
+            System.out.println("EL numero " + num + " se ha encontrado " + contador + " veces.");
+        }
+
+EJERCICIO 17
+
+Scanner leer = new Scanner(System.in);
+        int n, contador1 = 0, contador2 = 0, contador3 = 0, contador4 = 0, contador5 = 0, cant = 0;
+        
+        System.out.println("Inrese el tamaño de su vector: ");
+        n = leer.nextInt();
+        int[] vectorNumeros = new int[n];
+for (int i = 0; i < vectorNumeros.length; i++) {
+            vectorNumeros[i] += (Math.random() * 100000);
+            System.out.println(vectorNumeros[i]);
+            String numero = String.valueOf(vectorNumeros[i]);
+            cant = numero.length();
+            
+            switch(cant){
+                case 1:
+                    contador1++;
+                    break;
+                case 2:
+                    contador2++;
+                    break;
+                case 3:
+                    contador3++;
+                    break;
+                case 4:
+                    contador4++;
+                    break;
+                case 5:
+                    contador5++;
+                    break;
+            }
+        }
+System.out.println("Hay " + contador1 + " numeros de 1 digito.");
+        System.out.println("Hay " + contador2 + " numeros de 2 digitos.");
+        System.out.println("Hay " + contador3 + " numeros de 3 digitos.");
+        System.out.println("Hay " + contador4 + " numeros de 4 digitos.");
+        System.out.println("Hay " + contador5 + " numeros de 5 digitos.");
+
+EJERCICIO 17 OTRA FORMA 
+  Scanner leer = new Scanner(System.in);
+        int t, j = 0;
+
+        System.out.println("Ingresa el tamaño del vector");
+        t = leer.nextInt();
+        int vect[] = new int[t];
+
+        for (int i = 0; i < vect.length; i++) {
+            vect[i] = (int) (Math.random() *1002);
+            System.out.println(vect[i]);
+        }
+        c1(vect, j);
+        c2(vect, j);
+        c3(vect, j);
+        c4(vect, j);
+        c5(vect, j);
+        System.out.println("\n1 Solo Digito: " + c1(vect,j));
+        System.out.println("2 Solo Digito: " + c2(vect,j));
+        System.out.println("3 Solo Digito: " + c3(vect,j));
+        System.out.println("4 Solo Digito: " + c4(vect,j));
+        System.out.println("5 Solo Digito: " + c5(vect,j));
+    }
+
+    public static int c1(int vect[], int j) {
+        int d;
+        for (int i = 0; i < vect.length; i++) {
+            d = vect[i];
+            d = Integer.toString(d).length();
+
+            switch (d) {
+                case 1:
+                    j++;
+                    break;
+            }
+        }
+        return j;
+
+    }
+    public static int c2(int vect[], int j) {
+        int d;
+        for (int i = 0; i < vect.length; i++) {
+            d = vect[i];
+            d = Integer.toString(d).length();
+
+            switch (d) {
+                case 2:
+                    j++;
+                    break;
+            }
+        }
+        return j;
+
+    }
+    public static int c3(int vect[], int j) {
+        int d;
+        for (int i = 0; i < vect.length; i++) {
+            d = vect[i];
+            d = Integer.toString(d).length();
+
+            switch (d) {
+                case 3:
+                    j++;
+                    break;
+            }
+        }
+        return j;
+
+    }
+    public static int c4(int vect[], int j) {
+        int d;
+        for (int i = 0; i < vect.length; i++) {
+            d = vect[i];
+            d = Integer.toString(d).length();
+
+            switch (d) {
+                case 4:
+                    j++;
+                    break;
+            }
+        }
+        return j;
+
+    }
+    public static int c5(int vect[], int j) {
+        int d;
+        for (int i = 0; i < vect.length; i++) {
+            d = vect[i];
+            d = Integer.toString(d).length();
+
+            switch (d) {
+                case 5:
+                    j++;
+                    break;
+            }
+        }
+        return j;
+
+    }
+
+}
+
+EJERCICIO 17 OTRA FORMA 2 
+
+Scanner leer = new Scanner(System.in);
+        int[] vector = new int[10];
+        llenarVector(vector);
+    }
+    //Sub proceso
+    public static void llenarVector(int[] vector) {
+
+        for (int i = 0; i < vector.length; i++) {
+            int num2 = (int) (Math.random() * 10000);
+            vector[i] = num2;
+            System.out.print("[" + vector[i] + "] ");
+        }
+        int n;
+        int cont1=0;
+        int cont2=0;
+        int cont3=0;
+        int cont4=0;
+        int cont5=0;
+        for (int i = 0; i < vector.length; i++) {
+         
+            switch (n = (int)(Math. log10(vector[i])+1)){
+                case 1:
+                    cont1=cont1+1;
+                    break;
+                case 2:
+                    cont2=cont2+1;
+                    break;
+                case 3:
+                    cont3=cont3+1;
+                    break;
+                case 4:
+                    cont4=cont4+1;
+                    break;
+                case 5:
+                    cont5=cont5+1;
+                    break;
+            }
+        }
+        System.out.println("");
+        if (cont1 >0){
+            System.out.println("HAY "+ cont1 +" de un solo digito");
+        }
+        if (cont2 >0){
+           System.out.println("HAY "+ cont2 +" de dos  digito"); 
+        }
+        if (cont3 >0){
+          System.out.println("HAY "+ cont3 +" de tres digito");  
+        }
+        if (cont4 >0){
+           System.out.println("HAY "+ cont4 +" de cuatro digito"); 
+        }
+        if (cont5 >0){
+          System.out.println("HAY "+ cont5 +" de cinco  digito");  
+        }
+    }
+    
+}
+
+
+EJERCICIO 18 
+
+System.out.println("M A T R I Z   T R A N S P U E S T A");
+        System.out.println();
+        
+        int [] [] MatrizA = new int [4][4];
+        
+        for (int i = 0 ; i < 4 ; i++) {
+            for ( int j = 0 ; j < 4 ; j++ ){
+                MatrizA [i][j] = (int)(Math.random() * 10);
+            }
+        }
+        
+        for (int a = 0 ; a < 4 ; a++) {
+            for (int b = 0 ; b < 4 ; b++){
+                System.out.print(MatrizA [a][b] + " ");
+            }
+            System.out.println();
+        }
+         System.out.println();
+          System.out.println();
+        
+          for (int a = 0 ; a < 4 ; a++) {
+            for (int b = 0 ; b < 4 ; b++){
+                System.out.print(MatrizA [b][a] + " ");
+            }
+            System.out.println();
+        }
+
+EJERCICIO 19
+
+Scanner leer = new Scanner(System.in);
+        
+        int[][] matrizA = new int [3][3];
+        int i,j ;
+        
+        System.out.println("Lenna la matriz de 9");
+        //Llenado matrizA
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+               matrizA[i][j] = leer.nextInt(); 
+            }
+        }
+        //Imprimir matrizA
+        int n;
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+                n= matrizA[i][j];
+                switch (Integer.toString(n).length()){
+                case 1:
+                    System.out.print("[ "+ matrizA[i][j]+"]");
+                    break;
+                case 2:
+                    System.out.print("["+ matrizA[i][j]+"]");
+                    break;
+                }
+            }
+            System.out.println("");
+        }
+        int[][] matrizB = new int [3][3];
+        //llenado de la matrizB
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+               matrizB[j][i] = matrizA[i][j];    
+            }
+        }
+        System.out.println("");
+        //imprimir la matrizB
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+                n= matrizB[i][j];
+               switch (Integer.toString(n).length()){
+                case 1:
+                    System.out.print("[ "+ matrizB[i][j]+"]");
+                    break;
+                case 2:
+                    System.out.print("["+ matrizB[i][j]+"]");
+                    break;
+                }
+            }
+            System.out.println("");
+        }
+        int[][] matrizC = new int [3][3];
+        //llenado de la matrizB
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+               matrizC[i][j] =-matrizB[i][j];    
+            }
+        }
+        System.out.println("");
+        //imprimir la matrizB
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+                n= matrizC[i][j];
+               switch (Integer.toString(n).length()){
+                case 1:
+                    System.out.print("[ "+ matrizC[i][j]+"]");
+                    break;
+                case 2:
+                    System.out.print("["+ matrizC[i][j]+"]");
+                    break;
+                }
+            }
+            System.out.println("");
+        }
+        System.out.println("");
+        //comparacion
+        int contador=0;
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+                if (matrizA[i][j]==matrizC[i][j]){
+                    contador=contador+1;
+                }
+            }
+        }
+        
+        if (contador==9){
+            System.out.println("La matriz SI Anti simetrica");
+        }else{
+            System.out.println("La matriz NO es Anti simetrica");
+        }
+    }
+}
+
+EJERCICIO 20
+ Scanner sc=new Scanner(System.in);
+        int sumaF=0,sumaC=0,sumaD1=0,sumaD2=0,j,sumaC2=0,sumaC3=0, conta=0;
+        int[][] cm = new int[3][3];
+        for (int i = 0; i < 3; i++) {
+            for (int k = 0; k < 3; k++) {
+                 cm[i][k]=sc.nextInt();
+            }
+        }
+        for (int i = 0; i < 3; i++) {
+            for (j = 0; j < 3; j++) {
+                sumaF+=cm[i][j];  
+            }
+            if(sumaF!=15){
+                break;
+            }else{conta++;}
+            sumaF=0;
+            sumaC3+=cm[i][2];
+            sumaC2+=cm[i][1];
+            sumaC+=cm[i][0];
+            sumaD1+=cm[i][i];
+            sumaD2+=cm[i][j-1];  
+        }
+        if(conta==3 && (sumaC3+sumaC2+sumaC+sumaD1+sumaD2)%15==0){
+            System.out.println("SI");
+        }else{
+             System.out.println("NO");
+        }
+    }
+}
+
+OTRA FORMA EJERCICIO 20 
+
+Scanner leer = new Scanner(System.in);
+        
+        int[][] matriz = new int [3][3];
+        int i,j ;
+        
+        System.out.println("Llena la matriz con numero del 1 al 9");
+        //Llenado matrizA
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+               matriz[i][j] = leer.nextInt(); 
+            }
+        }
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+                System.out.print("["+matriz[i][j]+"]");
+            }
+            System.out.println("");
+        }
+        int suma;
+        int diagonal=15;
+        int filas=15;
+        int columnas=15;
+        for (i=0; i<3; i++){
+            for(j=0; j<3; j++){
+                if (matriz[i][j]<1 || matriz[i][j]>9){
+                    System.out.println("La matriz no es magica por que ingresate una numero fuera del rango");
+                    break;
+                } else {
+                    suma=matriz[0][0]+matriz[0][1]+matriz[0][2];
+                    if (suma==filas){
+                        suma=0;
+                        suma=matriz[1][0]+matriz[1][1]+matriz[1][2];
+                        if (suma==filas){
+                            suma=0;
+                            suma=matriz[2][0]+matriz[2][1]+matriz[2][2];
+                            if (suma==filas){
+                                suma=0;
+                                suma=matriz[0][0]+matriz[1][0]+matriz[2][0];
+                                if(suma==columnas){
+                                 suma=0;   
+                                 suma=matriz[0][1]+matriz[1][1]+matriz[2][1];
+                                 if (suma== columnas){
+                                     suma=0;
+                                     suma=matriz[0][2]+matriz[1][2]+matriz[2][2];
+                                     if (suma==columnas){
+                                         suma=0;
+                                         suma=matriz[0][0]+matriz[1][1]+matriz[2][2];
+                                         if (suma==diagonal){
+                                             suma=0;
+                                             suma=matriz[2][0]+matriz[1][1]+matriz[0][2];
+                                             if (suma==diagonal){
+                                                 System.out.println("LA MATRIZ ES MAGICA");
+                                                 break;
+                                             }
+                                         }else{
+                                             System.out.println("La matriz no es magica");
+                                        break;
+                                         }
+                                     }else{
+                                         System.out.println("La matriz no es magica");
+                                        break;
+                                     }
+                                 }else{
+                                     System.out.println("La matriz no es magica");
+                                    break;
+                                 }
+                                }else{
+                                    System.out.println("La matriz no es magica");
+                                     break;
+                                }
+                            }
+                        }else{
+                            System.out.println("La matriz no es magica");
+                        break;
+                        }
+                        
+                    }else{
+                        System.out.println("La matriz no es magica");
+                        break;
+                    }
+                }
+            }
+            break;
+        }
+        
+    }
+    
+}
+
+EJERCICIO 21
+
+Scanner leer = new Scanner(System.in);
+        int [][] matriz = {{2,4,4,1,5},{6,6,9,5,1},{2,4,4,9,7},{6,6,9,9,7},{8,10,12,9,7}};
+        int i,j ;
+        
+        System.out.println("MATRIZ");
+        //imprimir matriz [10][10]
+        int n;
+        for (i=0; i<4; i++){
+            for (j=0; j<4; j++){
+                n= matriz[i][j];
+                switch (Integer.toString(n).length()){
+                case 1:
+                    System.out.print("["+ matriz[i][j]+"]");
+                    break;
+                case 2:
+                    System.out.print("[ "+ matriz[i][j]+"]");
+                    break;
+                case 3:
+                    System.out.print("[ "+ matriz[i][j]+"]");
+                    break;
+                }
+            }
+            System.out.println("");
+        }
+System.out.println("MATRIZ P");
+        //Llenado matrizA
+        int [][] matrizP = {{2,4,4},{6,6,9},{8,10,12}};
+        //imprimir matriz P
+        for (i=0; i<3; i++){
+            for (j=0; j<3; j++){
+                n= matriz[i][j];
+                switch (Integer.toString(n).length()){
+                case 1:
+                    System.out.print("["+ matriz[i][j]+"]");
+                    break;
+                case 2:
+                    System.out.print("[ "+ matriz[i][j]+"]");
+                    break;
+                case 3:
+                    System.out.print("[ "+ matriz[i][j]+"]");
+                    break;
+                }
+            }
+            System.out.println("");
+        }
+    } 
+}
+
+
+Ejercicio 21 hecho en clase
+
+  Scanner input = new Scanner(System.in);
+        int [][] matrizGrande = {{1, 26, 36, 47, 5, 6, 72, 81, 95,10}, 
+            {11, 12, 13, 21, 41, 22, 67, 20, 10, 61}, 
+            {56, 78, 87, 90, 9, 90, 17, 12, 87, 67}, 
+            {41, 87, 24, 56, 97, 74, 87, 42, 64, 35}, 
+            {32, 76, 79, 1, 36, 5, 67, 96, 12, 11}, 
+            {99, 13, 54, 88, 89, 90, 75, 12, 41, 76}, 
+            {67, 78, 87, 45, 14, 22, 26, 42, 56, 78}, 
+            {98, 45, 34, 23, 32, 56, 74, 16, 19, 18}, 
+            {24, 67, 97, 46, 87, 13, 67, 89, 93, 24}, 
+            {21, 68, 78, 98, 90, 67, 12, 41, 65, 12}};
+        
+        int [][] matrizMenor = {{36, 5, 67}, {89, 90, 75}, {14, 22, 26}};
+        boolean encontrado = true;
+        
+        
+        for (int i = 0; i <= 7; i++) {
+            for (int j = 0; j <= 7; j++) {
+                if(matrizGrande[i][j] == matrizMenor[0][0]){
+                    for (int k = 0; k < 3; k++) {
+                        for (int l = 0; l < 3; l++) {
+                            if(matrizGrande[i+k][j+l] != matrizMenor[k][l]){
+                                encontrado = false;
+                                k = 3;
+                                break;
+                            }
+                        }
+                    }
+                    System.out.println(encontrado);
+                    if(encontrado){
+                        System.out.println("Matriz encontrada. Fila = " + i + " Columna = " + j);
+                        i = 8;
+                        j = 8;
+                    }else{
+                        encontrado = true;
+                    }
+                }
+            }
+        }
+    }
+}
+
+Ejercicio 21 con aleatorio 
+
+ Scanner input = new Scanner(System.in);
+//        int [][] matrizGrande = {{1, 26, 36, 47, 5, 6, 72, 81, 95,10}, 
+//            {11, 12, 13, 21, 41, 22, 67, 20, 10, 61}, 
+//            {56, 78, 87, 90, 9, 90, 17, 12, 87, 67}, 
+//            {41, 87, 24, 56, 97, 74, 87, 42, 64, 35}, 
+//            {32, 76, 79, 1, 36, 5, 67, 96, 12, 11}, 
+//            {99, 13, 54, 88, 89, 90, 75, 12, 41, 76}, 
+//            {67, 78, 87, 45, 14, 22, 26, 42, 56, 78}, 
+//            {98, 45, 34, 23, 32, 56, 74, 16, 19, 18}, 
+//            {24, 67, 97, 46, 87, 13, 67, 89, 93, 24}, 
+//            {21, 68, 78, 98, 90, 67, 12, 41, 65, 12}};
+//        
+//        int [][] matrizMenor = {{36, 5, 67}, {89, 90, 75}, {14, 22, 26}};
+        int [][] matrizGrande = new int [10][10];
+        int [][] matrizMenor = new int [3][3];
+        
+        pushMatrix(matrizGrande);
+        printMatrix(matrizGrande);
+        
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                System.out.println("Por favor ingrese un número");
+                matrizMenor[i][j] = input.nextInt();
+            }
+        }
+        
+        
+        boolean encontrado = true;
+        
+        for (int i = 0; i <= 7; i++) {
+            for (int j = 0; j <= 7; j++) {
+                if(matrizGrande[i][j] == matrizMenor[0][0]){
+                    for (int k = 0; k < 3; k++) {
+                        for (int l = 0; l < 3; l++) {
+                            if(matrizGrande[i+k][j+l] != matrizMenor[k][l]){
+                                encontrado = false;
+                                k = 3;
+                                break;
+                            }
+                        }
+                    }
+                    System.out.println(encontrado);
+                    if(encontrado){
+                        System.out.println("Matriz encontrada. Fila = " + i + " Columna = " + j);
+                        i = 8;
+                        j = 8;
+                    }else{
+                        encontrado = true;
+                    }
+                }
+            }
+        }
+    }
+    
+    public static void pushMatrix (int [][] matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                matrix[i][j] = (int) (Math.random() * 100);
+            }
+        }
+    }
+    
+    public static void printMatrix (int [][] matrix){
+        for (int i = 0; i < matrix.length; i++) {
+            for (int j = 0; j < matrix.length; j++) {
+                System.out.print(" " + matrix[i][j] + " ");
+            }
+            System.out.println("");
+        }
+    }
+}
+
+EJERCICIOS EXTRA 
+
+EJERCICIO 1 
+   //1140 minutos = 1 dias
+       //60 minutos = 1 hora
+        int totMins;
+        int horas;
+        int dias;
+ 
+    Scanner leer= new Scanner(System.in);
+    System.out.println("Ingrese el tiempo en minutos: ");
+        totMins= leer.nextInt();
+        
+        //horas = totMins / 60;
+        dias = totMins / 1440;
+        horas =((totMins % 1440)/60);
+        
+        
+        
+
+        
+        System.out.println(totMins + " minutos equivalen a " + dias + " día(s) y " + horas + " hora(s)"); 
+
+    }
+}
+
+EJERCICIO 2 
+
+ public static void main(String[] args) {
+      int A=1;
+      int B=2;
+      int C=3;
+      int D=4;
+      int cent;
+       
+      System.out.println((A)+" "+(B)+" "+" "+(C)+" "+(D));
+      
+     cent = B;
+        B = C;
+        C = A;
+        A = D;
+        D = cent;
+      
+      
+        System.out.println((A)+" "+(B)+" "+" "+(C)+" "+(D));
+      
+      
+    }
+    
+}
+
+Extra 5 
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+     
+        char opcion;
+        double valor;
+      
+        
+        do {
+            System.out.println("A: 50% de descuento");
+            System.out.println("B. 35% de descuento");
+            System.out.println("C. No aplica descuento");
+            System.out.println("Elija una categoría: ");
+        opcion = leer.next().charAt(0);
+        } while (opcion != 'A' && opcion != 'B' && opcion != 'C');
+        
+        System.out.println("Ingrese el valor del tratamiento");
+        valor = leer.nextInt();
+        
+        if (opcion == 'A') {
+            valor = valor * 0.50;
+            System.out.println("Descuento aplicable: 50%");
+                System.out.println("Importe con descuento: $" + valor); 
+        }
+          
+                
+                if (opcion == 'B') {
+                    valor -= valor * 0.35;
+                System.out.println("Descuento aplicable: 35%");
+                System.out.println("Importe con descuento: " + valor);
+                }
+                if (opcion == 'C') {
+                    System.out.println("Este tratamiento no recibe descuento");
+                }
+        }
+            
+            }
+
+EXTRA 3 
+Scanner leer = new Scanner(System.in);
+        
+        System.out.println("ingrese una letra");
+        String letra=leer.nextLine();
+        
+        if(letra.length()>1){
+            do{
+            System.out.println("ingrese una letra");
+            letra=leer.nextLine();
+            }while(letra.length()>1);
+        }
+        
+        if (letra.equalsIgnoreCase("A")||letra.equalsIgnoreCase("E")||letra.equalsIgnoreCase("I")||letra.equalsIgnoreCase("O")||letra.equalsIgnoreCase("U")) {
+            System.out.println("Correcto");
+        }
+        else{
+            System.out.println("incorrecto");
+        }
+        
+    }
+    
+}
+
+EXTRA 4 
+
+Scanner leer = new Scanner(System.in);
+      int N;
+      
+      do {
+            System.out.print("Introduce un número entre 1 y 9: ");
+            N = leer.nextInt();
+      } while (N < 1 || N > 10);
+      System.out.println(N + " en numeros romanos -> " + convertirANumerosRomanos(N));                            
+  }
+     //función para pasar a números romanos
+    public static String convertirANumerosRomanos(int numero) {
+      int i, unidades;
+      String romano = "";
+      unidades = numero %10;
+      
+    if (unidades == 9) {
+          romano =  "IX";
+      } else if (unidades >= 5) {
+                 romano =  "V";
+                 for (i = 6; i <= unidades; i++) {                                                           
+                      romano = romano + "I";
+                 }
+      } else if (unidades == 4) {
+                 romano =  "IV";
+      } else {
+                 for (i = 1; i <= unidades; i++) {
+                      romano = romano + "I";
+                 }
+      }
+      return romano;
+  }
+}
+
+EXTRA 8
+Scanner leer = new Scanner(System.in);
+        int par=0, impar=0,cantidad=0, num;
+        do{
+        System.out.println("Ingrese un número");        
+        num = leer.nextInt();
+            if (num < 0) {
+                continue;               
+            }
+                        
+            if (num%5 == 0) {
+              break;  
+            }
+            if (num%2 == 0) {
+                par++;
+                
+            }else {
+                impar++;
+            }
+            cantidad++;
+        }while (num%5 != 0);
+        
+        System.out.println("La cantidad de números impares es " + impar);       
+        System.out.println("La cantidad de números pares es " + par);
+        System.out.println("La cantidad de números ingresados " + cantidad);       
+    }
+    
+}
+ EXTRA 9
+public static void main(String[] args) {
+        // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        int numerador,denominador,cociente=0;
+        System.out.println("ingrese los valores a dividir num1/num2");
+        numerador=leer.nextInt();
+        denominador=leer.nextInt();
+        
+        
+        do {            
+            numerador-=denominador;
+            cociente++;
+        } while (numerador>=denominador);
+        
+        System.out.println("el residuo es: "+numerador);
+        System.out.println("el cociente es: "+cociente);
+    }
+    
+}
+
+EXRA 10
+int num1 = (int) (Math.random()* 11), num2 = (int) (Math.random()* 11), result = num1*num2, resp = 0;
+        System.out.println(num1);
+        System.out.println(num2);
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Ingrese el resultado de la multiplicacion: ");
+        resp = leer.nextInt();
+        while (resp != result){
+            System.out.println("Error, ingrese un nuevo resultado: ");
+            resp = leer.nextInt();
+        }
+        System.out.println("Has adivinado :)");
+
+EXTRA 11
+Scanner leer = new Scanner(System.in);
+        int num,digitos= 0;
+      
+        System.out.println("Ingrese un número");
+        num = leer.nextInt();
+        
+        while(num !=0){
+        num = num/10;
+        digitos++;
+        
+        
+       }
+        System.out.println("La cantidad de digitos es: " + digitos);
+    }
+    
+}
+EXTRA 12
+for (int i = 0;  i< 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                for (int k = 0; k < 10; k++) {
+                    if (i == 3) {
+                        System.out.print("E-");
+                    }else{
+                     
+                        System.out.print(i+"-");
+                    }
+                    
+                   if (j == 3) {
+                        System.out.print("E-");
+                    }else{
+                     
+                        System.out.print(j+"-");
+                    } 
+                   if (k == 3) {
+                        System.out.print("E");
+                    }else{
+                     
+                        System.out.print(k);
+                        
+                    }
+                    System.out.println("");
+                }
+                
+            }
+            
+        }
+    }
+    
+}
+
+EXTRA 12 CON EQUALS
+
+for (int i = 0;  i< 10; i++) {
+            for (int j = 0; j < 10; j++) {
+                for (int k = 0; k < 10; k++) {
+                    
+                    String e1 = Integer.toString(i);
+                    String e2 = Integer.toString(j);
+                    String e3 = Integer.toString(k);
+                    
+                    if (e1.equals("3")) {
+                        System.out.print("E-");
+                    }else{                     
+                        System.out.print(e1+"-");
+                    }
+if (e2.equals("3")) {
+                        System.out.print("E-");
+                    }else{                     
+                        System.out.print(e2+"-");
+                    } 
+                   
+                    if (e3.equals("3")) {
+                        System.out.print("E");
+                    }else{                     
+                        System.out.print(e3);                       
+                    }
+                    System.out.println("");                                                                              
+                }                
+            }            
+        }
+
+EXTRA 13
+Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese la altura de la escalera: ");
+        int altura = leer.nextInt();
+        String escalera = "";
+        
+        for (int i = 1; i < altura+1; i++) {
+            escalera=escalera.concat(Integer.toString(i));
+            System.out.println(escalera);           
+        }
+EXTRA 14 (GUSS)
+Scanner input = new Scanner(System.in);
+
+        // Pedir la cantidad de familias
+        System.out.print("Ingrese la cantidad de familias: ");
+        int numFamilias = input.nextInt();
+
+        // Inicializar variables para calcular la media
+        int totalHijos = 0;
+        int totalEdad = 0;
+
+        // Pedir la cantidad de hijos para cada familia y calcular la media
+        for (int i = 1; i <= numFamilias; i++) {
+            System.out.println("Ingrese la cantidad de hijos para la familia "+ i);
+            int numHijos = input.nextInt();
+            totalHijos += numHijos;
+
+            for (int j = 1; j <= numHijos; j++) {
+                System.out.printf("Ingrese la edad del hijo %d de la familia %d: ", j, i);
+                int edadHijo = input.nextInt();
+                totalEdad += edadHijo;
+            }
+        }
+
+        // Calcular y mostrar la media
+        double mediaEdad = (double) totalEdad / totalHijos;
+        System.out.println("La media de edad de los hijos de todas las familias es: "+ mediaEdad);
+    }
+    }
+EXTRA 15 (GUSS)
+canner input = new Scanner(System.in);
+
+        // Pedir los dos números al usuario
+        System.out.print("Ingrese el primer número: ");
+        double num1 = input.nextDouble();
+
+        System.out.print("Ingrese el segundo número: ");
+        double num2 = input.nextDouble();
+
+        // Mostrar las opciones al usuario
+        System.out.println("¿Qué operación desea realizar?");
+        System.out.println("1. Sumar");
+        System.out.println("2. Restar");
+        System.out.println("3. Multiplicar");
+        System.out.println("4. Dividir");
+
+        // Pedir la opción al usuario
+        System.out.print("Elija una opción: ");
+        int opcion = input.nextInt();
+
+        // Realizar la operación correspondiente
+        switch (opcion) {
+            case 1:
+                double suma = sumar(num1, num2);
+                System.out.println(num1+" + "+ num2+" = "+ suma);
+                break;
+
+            case 2:
+                double resta = restar(num1, num2);
+                System.out.printf(num1+" + "+ num2+" = "+ resta);
+                break;
+
+            case 3:
+                double producto = multiplicar(num1, num2);
+                System.out.printf(num1+" + "+ num2+" = "+ producto);
+                break;
+
+            case 4:
+                double division = dividir(num1, num2);
+                System.out.printf(num1+" + "+ num2+" = "+ division);
+                break;
+
+            default:
+                System.out.println("Opción inválida");
+                break;
+        }
+
+        
+    }
+
+    // Funciones para realizar las operaciones matemáticas
+    public static double sumar(double a, double b) {
+        return a + b;
+    }
+
+    public static double restar(double a, double b) {
+        return a - b;
+    }
+
+    public static double multiplicar(double a, double b) {
+        return a * b;
+    }
+
+    public static double dividir(double a, double b) {
+        return a / b;
+    }
+ }
+EXTRA 16 (GUSS)
+Scanner input = new Scanner(System.in);
+        boolean continuar = true;
+
+        while (continuar) {
+            System.out.print("Ingrese el nombre de la persona: ");
+            String nombre = input.nextLine();
+
+            System.out.print("Ingrese la edad de la persona: ");
+            int edad = input.nextInt();
+            input.nextLine();
+
+            System.out.printf("La persona ingresada es %s, ", nombre);
+            if (edad >= 18) {
+                System.out.println("es mayor de edad.");
+            } else {
+                System.out.println("es menor de edad.");
+            }
+
+            System.out.print("¿Quiere seguir ingresando personas? (Sí/No): ");
+            String respuesta = input.nextLine();
+
+            if (respuesta.equalsIgnoreCase("no")) {
+                continuar = false;
+            }
+        }
+          }
+      }
+EXTRA 17 
+        
+      System.out.println("Ingrese un numero entero");
+      Scanner leer = new Scanner(System.in);
+      int num=leer.nextInt();
+      
+        System.out.println(esPrimo(num));
+        
+        
+    }
+    
+    public static boolean esPrimo(int num){
+    boolean primo;
+    primo=true;    
+    
+    if (num<=1){
+        
+        
+    return false;    
+        
+    }
+    
+    for (int i=2; i<= Math.sqrt(num); i++){
+        
+        if(num%i==0){
+            
+            return false;
+            
+        }
+    
+    }
+    
+    return primo;
+    } 
+    
+}
+EXTRA 18 
+
+        System.out.println("Ingrese el tamano de vector");
+           Scanner leer = new Scanner(System.in);
+      int n= leer.nextInt();
+        int suma=0;      
+        int[] vector=new int[n];
+        
+        for(int i=0;i<vector.length;i++){
+        
+            
+            
+            System.out.println("Ingrese el valor del posicion "+i);
+            
+            int valor= leer.nextInt();
+                  vector[i]=valor;      
+            suma+=valor;
+            
+          
+        
+        }
+        System.out.println("////////////////////////////////////////////    ");
+        for(int i=0;i<vector.length;i++){
+        
+            System.out.println(vector[i]);
+        
+        }
+        
+        System.out.println("La suma de todos los valores de la posicion del vector es igual a "+suma);
+    }
+    
+}
+EXTRA 19
+int n1,n2;
+     Scanner leer = new Scanner (System.in);
+        System.out.println(" ingrese la longitud de los vectores");
+        n1=leer.nextInt();
+      double [] vec = new double [n1] ;
+      double [] vec2 = new double [n1] ;
+      for (int i = 0; i < vec.length; i++) {
+            System.out.println("ingrese  los valores del vecor1");
+            vec[i]=leer.nextDouble();
+        }
+      for (int i = 0; i < vec2.length; i++) {
+            System.out.println("ingrese  los valores del vector2");
+            vec2[i]=leer.nextDouble();
+        }
+ 
+        System.out.println(" son iguales? " +     soniguales(vec,vec2));
+    }
+    public static boolean soniguales (double vec[], double vec2[]){
+        
+        for (int i = 0; i < vec.length; i++) {
+            if (vec[i]!=vec2[i]) {
+                return false;
+            }
+        }
+       return true; 
+    }
+
+(AGREGAR AL 19 UN RANDOM)
+EXTRA 20
+ublic static void main(String[] args) {
+  int[] vector = new int[10]; 
+        llenarVector(vector); 
+        imprimirVector(vector); 
+    }
+    
+    public static void llenarVector(int[] vector) {
+        Random rand = new Random(); 
+        for(int i = 0; i < vector.length; i++) {
+            vector[i] = rand.nextInt(100); 
+        }
+    }
+    
+    public static void imprimirVector(int[] vector) {
+    
+        for(int i=0;i < vector.length;i++ )
+        System.out.print(vector[i]+",");
+        
+    }
+}

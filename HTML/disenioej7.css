@@ -1,0 +1,28 @@
+*{
+    margin: 0%;
+}
+body{ 
+    margin: 0%;
+    background-color: rgb(115, 189, 193);
+}
+.a1{
+   
+    margin: 0%;
+    justify-content: space-between;
+    background-color: antiquewhite;
+
+}
+h1{
+    text-align: center;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: rgb(28, 10, 87);
+}
+h2{
+    text-align: center;
+    font-family: fantasy;
+    color: rgb(26, 0, 154);
+}
+p{
+    text-align: left;
+    font-family: monospace;
+}

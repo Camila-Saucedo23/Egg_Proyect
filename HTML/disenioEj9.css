@@ -1,0 +1,54 @@
+h1{
+    color: rgb(39, 147, 111);
+}
+strong{
+    color: darkred;
+}
+.destacado1{
+    color: rgb(243,176,75);
+}
+h2{
+    color: blue;
+}
+a{
+    color: darkred ;
+}
+em{
+    color: blue;
+}
+.especial1{
+    color: blueviolet;
+}
+.especial{
+    color:  rgb(243,176,75);
+}
+tfoot{
+    color:darkred ;
+}
+#z{
+    color: green;
+}
+.especial2{
+    color: red;
+
+}
+caption{
+    visibility: hidden;
+    
+}
+.purus{
+    color: rgb(243,176,75) ;
+}
+.ver{
+    color: green;
+}
+div{
+    color: rgb(113, 129, 62);
+
+}
+#especial5{
+    color:rgb(241, 72, 179)
+}
+.donec{
+    color: rgb(2, 81, 2);
+}

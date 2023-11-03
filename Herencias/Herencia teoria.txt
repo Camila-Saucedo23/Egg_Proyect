@@ -1,0 +1,71 @@
+Herencia 
+Relacion fuerte entre dos clases. donde una es padre de la otra, de esta manera una clase es capas de heredar atributos o metodos (caracteristicas) de la otra clase.
+propiedades, las mas comunes son superclase(padre/madre)
+subclase(hijo/hija) que hereda las propiedades de la superclase.
+
+"un objeto es tipo de una superclase" // "una heladera es un tipo de electrodomestico"
+
+la herecia ayuda a la reutilizacion de codigo.
+para usar herencia utilizamos:
+
+public class SubClase extends SuperClase{
+------- }
+
+**Atributos**
+
+En la superclase (madre) hay que usar el modificador protected ya que de esta manera la subclase puede utilizar estos atributos sin get y set.
+
+**Constructores** 
+
+no se heredan, pueden ser usados desde las subclases con la palabra super, permitiendo elegir que constructor queremos usar de la clase padre, si esta tiene un contructor vacio, y nosotros no "llamamos" a ningun constructor en especifico la subclase usara el vacio.
+
+public class SubClase extends SuperClase{
+private String Cosa;
+public SubClase(String Cosa,atributos de la SuperClase) 
+super(atributos de la SuperClase)
+this.Cosa = Cosa}
+}
+
+con la palabra super podemos llamar atributos, metodos y constructores de la superclase en la subclase.
+
+**Metodos**
+
+todos los metodos se heredan a la subclase, donde pueden ser redefinidos con "sobreescritura", se logra colocando el @Override arriba del metodo que queremos sobreescribir.
+
+**Polimorfismo** 
+su utiliza en poo para referirse a que es posible enviar mensajes iguales a objetos de tipos distintos. osea la misma tarea se realiza en distintas clases de forma distinta, son de igual significado y comportamiento. para que esto se cumpla ambas clases madre e hija deben tener el mismo metodo y usarlo de diferente manera.
+
+**final**
+
+se coloca en la ultima clase de la herencia, haciendo asi que ninguna clase pueda hererdar de esta.
+
+**if intance off**
+
+nos determina de donde viene el objeto, a que parte de la cadena de herencia pertenece. muestra donde se instancio.
+
+**Tipos de Herencia**
+*UNICA : b->a (calse b hereda de a)
+*Gerarquica : b,c,d -> a (b,c,d hereda de a)
+*Multinivel : c(Derivada)->b(intermedia)->a(madre)
+*Herencia multiple : c->a,b (c hereda de a y de b)(no se puede en java)
+
+
+**Metodos Finales**
+
+se utiliza como el final de clases para que ninguna clase hija o subclase pueda heredar este metodo.
+
+**Clase abstracta** 
+
+no permite crear objetos, suelen ser las super clases ya que esta no deberia poder instanciarse. si tenemos una clase animal no deberiamos poder crear un animal pero si una sub clase como un perro.
+si la clase tiene un metodo abstracto la clase tiene que ser considerada como abstracta.
+
+//EJ public abstract class animal
+
+**Motodo abstracto** 
+
+son metodos que suelen estar en la clase madre, son creados vacios, para que se modifiquen (sobreescriban) en las clases hijas para una funcionalidad.
+dos opciones para un metodo abtracto, la primera, que no se puedan crear objetos de una clase. La
+segunda, que todas las subclases sobreescriban el método
+declarado como abstracto.
+
+

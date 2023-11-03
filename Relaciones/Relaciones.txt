@@ -1,0 +1,34 @@
+RELACIONES ENTRE CLASES JAVA 
+sirve para unir clases y utilizar funcionalidad o servicios que hay en esas clases. una conexion semantica, donde una clase conoce los atributos, operaciones y relaciones de la otra u otras clases. la relacion es establecida a traves de los objetos. 
+UNA CLASE SE RELACIONA CON OTRA TENIENDO UNA REFERENCIA A UNO O MAS OBJETOS DE LA OTRA CLASE EN FORMA DE ATRIBUTO.
+
+---TIPOS DE RELACIONES---
+*Asociacion simple : las hay bidireccionales, donde los objetos pueden conectarse entre si, y unidireccionales, donde solo un se relaciona a otro. 
+EJ: padre<->hijo (bi)
+EJ: curso->alumno (uni)
+		**Agregacion:  los objetos son independientes entre si(si se borra un objeto no afectara al otro), este tipo de relacion sirve para que un objeto instancie a otro y juntos completen una tarea. 
+EJ: programador->compu (el programador USA UNA compu) 
+		**Composicion: En este caso el objeto depende de la vida util del otro, donde un objeto complejo esta formado por otros mas pequeños.
+EJ: cuenta->cuentadebanco(cuanta tiene una cuenta banco) (la cuenta alberga muchas cuentas de banco, cuando estas se den de baja el objeto cuenta ya no tendra sentido"vida")
+
+Las relaciones del tipo ya mencionado puede aplicarse uno a uno, uno a muchos o cero a muchos. 
+
+*UNO A UNO : por cada objeto se tiene UNA relacion con otro objeto.
+en el codigo se representa con un atributo del tipo objeto. 
+
+*UNO A MUCHOS : por cada objeto tenemos una relacion con muchos otros objetos. para ello utilizamos colecciones ej ArrayList. Tambien se carga como atributo, solo que como coleccion del tipo objeto.
+
+----------------------------------------------------------------------
+
+**UML(lenguaje de modelado unificado) : define una forma estandar de ver como se diseña un sistema en forma de diagramas. es un lenguaje visual no de programacion (mapa conceptual). se hacen antes de codificar un programa, dejando claro lo que tenemos que crear.
+	*DIAGRAMAS DE CLASES:
+representan la estructura de un sistema, muestra clases, metodos, atributos. identifican las relaciones o herencias entre las clases y los objetos.
+"+" utilizado cuando es public
+"#" protected
+"-" private 
+		**RELACION ENTRE CLASES**
+representado con flechas entre las clases. la que recibe la relacion como un objeto de la otra clase tiene un rombo.
+para representar el uno a uno (1.. 1) o el uno a muchos (1.. *)
+*Herencia : prox guia (->)
+
+

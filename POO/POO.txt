@@ -1,0 +1,93 @@
+***REPOSITORIO DE POO DE EGG 
+
+https://github.com/EggCooperation/Java-POO.git
+
+
+PARADIGMA DE PROGRAMACION : Conjunto de metodos sistematicos que se pueden aplicar a cualquier nivel del diseño para resolver problemas.
+
+QUE ES POO : modelo de programacion basado en (partes simples y reutilizables de codigo) clases y objetos. Se enfoca en los objetos, sus atributos y las interacciones entre ellos que forman los programas.
+BASICAMENTE: conjunto de objetos que interaccionan entre si (dividir un codigo complejo en codigos mas pequeños y simples).
+
+OBJETO : cajonera (objeto), cajones (atributos). todos podemos tener la misma cajonera pero llenarla de diferente manera.
+OTRO EJEMPLO : personas (objeto), Caracteristicas como nombre, cumpleaños, adn (atributos). Pero todos tenemos uno diferente. 
+Con los objetos podemos formar un codigo que unifique a todos (personas o cajoneras) y que nos permite identificar entre siertos atributos (caracteristicas o forma de ordenar la ropa).
+
+ESTADO Y COMPORTAMIENTO DE LOS OBJETOS :
+
+ * Estado variables conocidas como sus atributos (color, raza de un perro). Se almacena en atributos
+
+ * Elementos lista de metodos, procedimientos, funciones u operaciones que un objeto puede ejecutar a otros objetos (mover la cola de un perro)
+
+POR CADA EJERCICIO DE LA GUIA CREAR UN JAVA PROJECT (java application)
+CREAR UNA CLASE (permite crear varios objetos)
+
+CLASE : Conbinacion de atributos y metodos. El nombre debe comenzar en mayuscula. 
+
+ELEMENTOS : tipo de objeto con caracteristicas en comun con otros, se necesita definir la informacion que almacenan y como se comportan.
+
+FORMATO DE UNA CLASE : 
+
+public class NombreClase { 
+// atributos 
+// constructores 
+// métodos propios 
+} 
+
+ATRIBUTOS  : caracteirsticas comunes entre los objetos, son espacios donde almasenamos informacion que cambia deppendiendo el objeto. (cajones de la cajonera). deben ir al inico de la clase.
+
+DECLARACION DE UN ATRIBUTO 
+
+<modificador>* <tipo> <nombre> 
+
+-modificador : hay muchos pero usaremos los de visibilidad (public,protected,private)
+-tipo : clase a la que pertenece el atributo
+-nombre: cualquier identificador (cualquier palabra) 
+
+ Ejercicio pag 08 y 09 (hechos)
+
+CONSTRUCTORES : metodos del objeto que nos permiten crearlo. denominando a esto INSTANCIACION.
+
+no solo definimos los atributos del objeto sino que definimos tambien los metodos (constructores) que determinan su comportamiento.
+
+FORMA DE UN CONSTRUCTOR 
+
+[<modificador>] <nombre de clase> ( <argumento>* ) { 
+ <sentencia>* 
+}
+
+modificador : public,protected,private
+nombre de clase : siempre el mismo 
+argumento : lista de parametros, misma funcion que metodos
+
+este metodo se utiliza para inicializar los atributos del objeto que se instancia.
+
+ATRIBUTOS Y METODOS ESTATICOS 
+el STATIC (determina que ese atributo pertenece a la clase) sirve para ocupar un solo espacio de memoria, donde todos los objetos tendran ese mismo atributo. es como una constante de clase.
+
+public class Cuenta { 
+private static String saldo; 
+}
+
+ATRIBUTOS FINALES
+variable constante, no admitira cambios despues de su declaracion y asignacion de valor. FINAL determina que no sera sobreescrito ni redefinido. toda contante FINAL debe ser inicializada cuando se declara. modificador FINAL, donde una clase final indica que no abra mas despues de ella. 
+
+Public class Perro { 
+private final int edad; 
+} 
+
+CLASE SERVICIO (service o control) : clase auxiliar que nos ayuda a manejar las clases y los objetos de estas. 
+clase comun que crea los objetos y todos sus metodos necesarios.
+se crea una por cada clase que tengamos.
+
+clase java - trabaja con la service - la clase main llama al service
+
+GRASP (patron experto)
+principio basico de asignacion de responsabilidades. EJE; la responsabilidad de la creacion de un objeto debe recaer sobre la clase que tiene la informacion para crearlo. obteniendo asi un diseño con mayor cohecion.
+ BENEFICIOS DEL GRASP
+se mantine el encapsulamiento,los objetos usan su info para hacer sus tareas. son mas faciles de entender
+
+
+
+
+
+

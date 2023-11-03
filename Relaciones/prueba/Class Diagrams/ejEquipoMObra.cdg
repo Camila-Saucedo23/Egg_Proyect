@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ClassDiagram name="ejEquipoMObra">
+  <ClassDiagramComponents>
+    <Class name="Equipo" package="Objetos" visibility="private" xPosition="178.0" yPosition="204.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+    <Class name="JUGADOR" package="" visibility="public" xPosition="542.0" yPosition="219.0">
+      <Fields/>
+      <Constructors/>
+      <Methods/>
+    </Class>
+  </ClassDiagramComponents>
+  <ClassDiagramRelations>
+    <HasRelation name="USA" source="Objetos.Equipo" target="JUGADOR" type="Aggregation" sourceCardinality="0..1" targetCardinality="1..*" collectionType="ArrayList"/>
+  </ClassDiagramRelations>
+</ClassDiagram>

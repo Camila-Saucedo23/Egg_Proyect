@@ -1,0 +1,342 @@
+**operadores = los de mayor valor se evaluan primero, si son iguales van de derecha a izquierda 
+operador de modulo= resto
+distinto !=
+Esto es escribir como en pseint (con Tab, se autoescribe)
+con salto de linea
+system.out.println = ("hola mundo")
+sin salto de linea 
+system.out.print = ("hola mundo")
+Para leer 
+new scanner(system.in) (libreria que se usa como lectura, con la variable leer )
+
+Scanner leer = new Scanner(System.in);
+        
+        for(i=0; i<20;i++){
+        System.out.println("Ingrese un numero");
+            n1 = leer.nextInt();
+        System.out.println("Ingrese un numero");
+            n2 = leer.nextInt();
+        System.out.println("Ingrese un numero");
+            n3 = leer.nextInt();
+        System.out.println("Ingrese un numero");
+            n4 = leer.nextInt();
+difurcaciones
+and 
+or
+operador logico de negacion 
+estructura de control
+bucles de repeticiones
+encerrado en llaves
+estructuras condicionales
+si se cumple o no una condicion 
+if/else
+if = se ejecuta solo si es verdadera la condicion 
+if/else = if si es verdadero Else se ejecuta si es negativo
+Ejemplo 
+  if(n1>25){
+            System.out.println("Su numero es mayor a 25: "+ n1);
+        }else{
+            System.out.println("Su numero es menor a 25:" +n2);
+        }
+        if(n2>25){
+            System.out.println("Su numero es mayor a 25: "+ n2);
+        }else{
+            System.out.println("Su numero es menor a 25: "+ n2);
+        }
+        if(n1>25 && n2>25){
+            System.out.println("Ambos son mayor a 25");
+        }
+swich = segun 
+switch(<opcion>) {
+case <1>:
+<sentencias1>
+break;
+case <2>:
+<sentencias2>
+break;
+default:
+<sentencias3>
+}
+Ejercicio 7 
+
+  Scanner leer = new Scanner(System.in);
+        
+        int op;
+        System.out.println("Ingrese la bomba que desea");
+        op = leer.nextInt();
+        
+        switch(op){
+            case 1: System.out.println("Es una bomba de agua");break;
+            case 2: System.out.println("Es una bomba de gasolina");break;
+            case 3: System.out.println("Es una bomba de hormigón");break;
+            case 4: System.out.println("Es una bomba de pasta alimenticia");break;
+            default: System.out.println("No existe un valor valido para esta bomba")
+
+
+Estructuras repetitivas = bucles
+sentencia de salto
+break = abandona una estructura de control
+continue = corta la interaccion pero no sale del bucle, si no que va a la cabecera del bucle
+while = hacer mientras La estructura while ejecuta un bloque de instrucciones 
+mientras se cumple una condición.
+while (<condición>) {
+<sentencias>
+}
+equalsIgnoreCase (no importa si es mayuscula o minuscula la letra)
+ejercicio 8
+
+
+Scanner nota = new Scanner(System.in);
+System.out.println("ingresa una nota");
+int numero=nota.nextInt();
+wile (numero >= 0 || numero<=10) {
+   System.out.printlin("ingresa de nuevo la nota");
+   numero = nota.nextInt();}
+    System.out.println("La nota es correcta: " + nota )
+Do/wile
+do {
+<sentencias>
+} while (<condición>);
+EJERCICIO 9 
+ Scanner leer = new Scanner(System.in);
+        
+        int x;
+        int r=0;
+        int contador = 0;
+        int suma;
+        System.out.println("Ingrese 20 numeros");
+        do{
+            
+            x = leer.nextInt();
+            
+           
+            contador++;
+            
+            if(x>0){
+            r+=x;
+            }
+            if(x == 0){
+            System.out.println("Se capturó el numero cero");
+            break;
+        }
+    }while(x !=0 && contador <20); // Si esto es falso se sale (SI X PASA DE 20 SE SALE)
+       
+        if(contador == 20){
+        System.out.println("Ya ingresó los 20 digitos, ha salido del buclé");
+        }
+        System.out.println("La suma tota es; "+r);
+        
+        
+    }
+    
+}
+
+OTRA MANERA DE HACERLO 
+public static void main(String[] args) {
+Scanner leer = new Scanner(System.in);
+        int suma,num,i;
+        suma=0;
+        i=0;
+        do{
+            System.out.println("Ingrese un número");
+            num=leer.nextInt();
+            i++;
+            
+            if(num==0){
+                System.out.println("se capturó un cero");
+                break;
+            }
+            if(num<0){
+                continue;
+            }
+            suma=suma+num;
+        }while(i!=20);
+        System.out.println("la suma de los números ingresados es: "+suma);
+    }
+    
+}
+
+for 
+La estructura for proporciona una forma compacta de recorrer un rango de valores cuando la
+cantidad de veces que se deber iterar un bloque de código es conocida. La forma general de la
+estructura for se puede expresar del siguiente modo:
+for (<inicialización>; <terminación>; <incremento>) {
+<sentencias>
+}
+Como regla general puede decirse que se utilizará el bucle for cuando se conozca de antemano el
+número exacto de veces que ha de repetirse un determinado bloque de instrucciones. Se utilizará
+el bucle do-while cuando no se conoce exactamente el número de veces que se ejecutará el
+bucle, pero se sabe que por lo menos se ha de ejecutar una. Se utilizará el bucle while cuando es
+posible que no deba ejecutarse ninguna vez.
+
+/*
+EJERCICIO 10 
+Realizar un programa que lea 4 números (comprendidos entre 1 y 20) e
+imprima el número ingresado seguido de tantos asteriscos como indique
+su valor. Por ejemplo: 
+5 *****
+3 ***
+11 ***********
+2 ** 
+ */
+package introjava;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Usuario
+ */
+public class P30Ejercicio10 {
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        System.out.println("Ingrese 4 numeros ");
+        
+        for (int j = 0; j < 4; j++) {
+            System.out.println("");
+            int n = leer.nextInt();
+            
+            if (n<=20) {
+                //System.out.print(n);
+                for (int i = 0; i < n; i++) {
+                    System.out.print("*");
+            
+                }
+            }else {
+                j--;
+                System.out.println("El numero ingresado en invalido");
+
+            }
+            
+        }
+ 
+        
+    }
+}
+
+MANERA 2
+
+//int i = 0;
+        Scanner leer = new Scanner(System.in);
+        
+        System.out.println("Ingrese 4 numeros ");
+            int n = leer.nextInt();
+            int n2 = leer.nextInt();
+            int n3 = leer.nextInt();
+            int n4 = leer.nextInt();
+
+            if (n<=20) {
+                 System.out.print(n);
+                 for (int i = 0; i < n; i++) {
+                    System.out.print("*");
+                }
+                    }else {
+                System.out.print("El numero ingresado en invalido");
+
+
+            } System.out.println(" ");
+            if (n2<=20) {
+                System.out.print(n2);
+                for (int i = 0; i < n2; i++) {
+                    System.out.print("*");
+                }
+                }else {
+                System.out.print("El numero ingresado en invalido");
+
+            }System.out.println(" ");
+            if (n3<=20) {
+                System.out.print(n3);
+                for (int i = 0; i < n3; i++) {
+                System.out.print("*");
+
+            }
+                }else {
+                System.out.print("El numero ingresado en invalido");
+                
+            } System.out.println(" ");
+            if (n4<=20) {
+                System.out.print(n4);
+                for (int i = 0; i < n4; i++) {
+                    System.out.print("*");
+                    
+            }
+            }else {
+                System.out.print("El numero ingresado es invalido");
+
+            }
+
+
+
+            System.out.println(" ");
+ 
+             // TODO code application logic here
+        }
+}
+    
+EJERCICIO 10 BIEN!
+public static void main(String[] args) {
+
+        Scanner leer = new Scanner(System.in);
+    
+        int num = 0;
+    
+        for(int i=0; i<4; i++){
+            do{
+                System.out.println("Ingrese un numero entre 1-20");
+                num = leer.nextInt();
+            }while(num<1 || num>20);
+            System.out.print(num + " - ");
+            for(int j=0; j<num; j++){
+                System.out.print("*");
+            }
+            System.out.println("");            
+        } 
+        System.out.println("");
+    }
+
+Ejerciocio 11 en nerbeans
+ejercicio12
+ // TODO code application logic here
+        Scanner leer = new Scanner(System.in);
+        int num1 = 0;
+        int num2 = 0;
+       
+        
+        System.out.println("Ingresa dos numeros:");
+        num1 = leer.nextInt();
+        num2 = leer.nextInt();
+        esMultiplo(num1, num2);
+        
+        
+    }
+    public static void esMultiplo(int num1, int num2){
+        if (num1%num2==0){
+            System.out.println("Es multiplo");
+        
+        }else{
+            System.out.println("NO ES MULTIPLO");
+        }
+}
+
+
+}
+
+
+
+public static void main(String[] args) {
+        Scanner leer = new Scanner(System.in);
+        String nombre = " ";
+        String[] equipo = new String[8];
+        
+        for(int i=0; i<equipo.length ;i++){
+            System.out.println("Ingrese el nombre del integrante: ");
+            
+            equipo[i] = nombre.nextLine();
+        }
+        
+    }
+

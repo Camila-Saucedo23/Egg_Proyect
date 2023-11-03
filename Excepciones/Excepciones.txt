@@ -1,0 +1,43 @@
+Excepciones!
+el termino hace referencia a un evento ocurrido en la ejecucion de un programa que interrumpe el flujo normal del programa.
+hay varios errores que pueden probocar una excepcion, un desbordamiento de memoria o un disco duro estropeado, una division por cero. en esta situacion java crea un objeto en la clase exception o error, este contiene la informacion del error incluyendo su tipo y el estado del programa cuando ocurrio. 
+despues de la excepcion el sistema intenta encontrar algo que maneje la excepcion, esta es la lista de metodos que se llamaron antes del error esta se llama pila de llamadas, luego busca en estas lineas algo que pueda manejar la exccepcion llamado manejador de excepciones.
+
+RESUMEN!
+excepcion en java es un objeto que modela un evento excepcional que no deberia haber ocurrido. ej de situaciones que lanzan una excepcion (no hay memoria, leer un tipo diferente de dato que el esperado, division por cero,etc)
+
+todas las clases de excepcion deriban de throwaable.
+Throwable tiene dos clases hijas: 
+** Exception: errores que ocurren en la maquina virtual de java y no en el programa. el programa no se ocupara de ellas.
+** Error: vienen de la actividad del programa, representadas por subclases de exception. una de las subclases mas importante es RuntimeException se usa para representar varios tipo comunes de errores.
+
+tiene 5 palabras clave :
+
+Elbloque try :
+se colocan instrucciones que creemos que puede llegar a tirar un excepcion en la ejecucion del programa y de este modo manejarla asi no finaliza el program.
+cada una de las excepciones que se produscan deltro del bloque try sera analizada por catch. cada try tiene que tener asociado un catch.
+
+Elbloque catch:
+por cada try se puede declarar uno o mas catch, cada uno trata un tipo de excepcion. para declarar el tipo de excepcion que es capas de trartas se declaraa un objeto de la clase de la excepcion.
+
+metodos throwable:
+getMessage devuelve una descripcion de la excepcion
+filllnStackTrace. devuelve un objeto throwable.
+String / toString devuelve un objeto string que tiene una descripcion completa de la excepcion.
+
+Bloque Finally: se usa para ejecutar un bloque de instrucciones sin importar la excepcion que sea, aun si no hay excepcion. de este modo no se repite codigo.
+
+Clausula throws:
+Colocar una excepción en la cláusula throws obliga a otros métodos a ocuparse de la excepción.
+Esto se puede hacer colocando otro throws al método que llama al método, con el tipo de 
+excepción que podría tirar o rodear el llamado del método con un try-catch, y de esa manera que 
+el try-catch se encargue de manejar la excepción que podría tirar el método.
+
+La palabra throw:
+ La palabra clave throw es útil para lanzar excepciones 
+basadas en ciertas condicione, por ejemplo, si un usuario ingresa datos incorrectos. También es 
+útil para lanzar excepciones personalizadas específicas para un programa o aplicación
+Cuando utilicemos la palabra throw en un método, vamos a tener que agregarle la palabra throws 
+al método con la excepción que va a tirar nuestro throw. De esa manera avisamos que cuando se 
+llame al método hay que manejar una posible excepción.
+
